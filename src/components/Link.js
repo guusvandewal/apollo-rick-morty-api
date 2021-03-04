@@ -2,18 +2,19 @@ import React, { Component } from 'react'
 
 class Link extends Component {
   render() {
+    const { image, name, episode } = this.props;
     return (
       <div className="grid__flex">
         <img
           className="grid__img"
-          src={this.props.image}
-          alt={this.props.name}
-          title={this.props.name}
+          src={image}
+          alt={name}
+          title={name}
         />
         {
           <p className="grid__name">
-            {this.props.name} <br />
-            <span>{this.props.episode}</span>{' '}
+            {name} <br />
+            <span>{episode}</span>{' '}
           </p>
         }
       </div>
