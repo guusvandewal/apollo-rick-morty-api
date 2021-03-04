@@ -59,8 +59,8 @@ header {
   line-height: 20px;
 }
 
-.grid__name span a {
+.grid__name span {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   color: #fff;
 }

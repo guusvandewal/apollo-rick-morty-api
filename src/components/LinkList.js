@@ -16,6 +16,9 @@ export const FEED_QUERY = gql`
         name
         image
         status
+        episode {
+          name
+        }
         location {
           name
           dimension
@@ -59,6 +62,7 @@ class LinkList extends Component {
                       image={link.image}
                       index={index}
                       name={link.name}
+                      episode={link.episode[0].name}
                     />
                   ))}
                 </div>

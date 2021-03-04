@@ -40,6 +40,9 @@ const FEED_SEARCH_QUERY = gql`
         name
         image
         status
+        episode {
+          name
+        }
       }
     }
   }
@@ -87,6 +90,7 @@ class Search extends Component {
                 image={link.image}
                 index={index}
                 name={link.name}
+                episode={link.episode[0].name}
               />
             ))}
           </div>

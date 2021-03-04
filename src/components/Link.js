@@ -12,10 +12,8 @@ class Link extends Component {
         />
         {
           <p className="grid__name">
-            {this.props.name}{' '}
-            <span>
-              <a href={this.props.episode}>{this.props.episode}</a>
-            </span>{' '}
+            {this.props.name} <br />
+            <span>{this.props.episode}</span>{' '}
           </p>
         }
       </div>
