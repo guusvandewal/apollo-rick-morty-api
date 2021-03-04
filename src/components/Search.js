@@ -44,6 +44,16 @@ const FEED_SEARCH_QUERY = gql`
     }
   }
 `
+const searchActions = (event, element) => {
+  console.log(event)
+  if (event.target.value !== null) {
+    element.setState({ filter: event.target.value })
+    element._executeSearch()
+  } else {
+    element.setState({ filter: '' })
+    element._executeSearch()
+  }
+}
 
 class Search extends Component {
   state = {
@@ -57,14 +67,12 @@ class Search extends Component {
     return (
       <div>
         <FormHolder>
-          Search for Rick or any name from the dropdown and click ok
+          Search for Rick or any character from the episodes and enjoy
           <input
             type="text"
-            onChange={(e) => this.setState({ filter: e.target.value })}
+            onChange={(e) => searchActions(e, this)}
+            onBlur={(e) => searchActions(e, this)}
           />
-          <button id="Submit" onClick={() => this._executeSearch()}>
-            OK
-          </button>
         </FormHolder>
         {this.state.links.length > 0 && (
           <div className="count">

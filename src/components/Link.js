@@ -10,7 +10,14 @@ class Link extends Component {
           alt={this.props.name}
           title={this.props.name}
         />
-        {/*<p className="small" >{this.props.location.dimension} </p>*/}
+        {
+          <p className="grid__name">
+            {this.props.name}{' '}
+            <span>
+              <a href={this.props.episode}>{this.props.episode}</a>
+            </span>{' '}
+          </p>
+        }
       </div>
     )
   }
