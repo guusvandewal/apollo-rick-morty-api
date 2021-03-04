@@ -45,7 +45,6 @@ const FEED_SEARCH_QUERY = gql`
   }
 `
 const searchActions = (event, element) => {
-  console.log(event)
   if (event.target.value !== null) {
     element.setState({ filter: event.target.value })
     element._executeSearch()
