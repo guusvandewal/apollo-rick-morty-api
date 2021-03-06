@@ -4,4 +4,4 @@
 2. ```yarn start ```
 3. ```Fun ```
 
-![Rick & Morty API](https://github.com/guusvandewal/apollo-rick-morty-api/blob/master/src/static/rick-morty-api.png?raw=true)
+![Rick & Morty API](rick-morty.gif)
